@@ -1,33 +1,11 @@
-#include <iostream>
-#include <sstream>
-#include <unordered_map>
-#include <cctype>
-#include <string>
-#include <algorithm>
+A word frequency counter is an algorithm used to count how often each word appears in a given text. It typically involves these steps:
 
-// Function to clean and convert the string to lowercase
-std::string clean_string(const std::string &text) {
-    std::string cleaned_text;
-    for (char ch : text) {
-        if (std::isalnum(ch)) {
-            cleaned_text += std::tolower(ch); // Convert to lowercase
-        } else if (ch == ' ') {
-            cleaned_text += ' '; // Keep spaces
-        }
-    }
-    return cleaned_text;
-}
+Preprocess the text (convert to lowercase, remove punctuation).
+Split the text into words (tokenization).
+Count the occurrences of each word using a data structure like a hash map or dictionary.
+The most common data structure for this task is a hash map (or Counter in Python), where each key is a word and the value is its frequency. This allows for efficient counting in O(n) time, where n is the number of words.
 
-// Function to count word frequencies
-void word_frequency_counter(const std::string &text) {
-    // Clean and process the input text
-    std::string cleaned_text = clean_string(text);
+Applications include text analysis, search engines, and spam detection.
 
-    
-}
 
-int main() {
-    std::string text = "Data structures and algorithms are fundamental for problem solving. Algorithms are the key to efficient solutions.";
 
-   
-}
